@@ -1,17 +1,17 @@
 version: '3'
 services:
-#  food-delivery-order_api:
-#    build: food-delivery-order_api
-#    volumes:
-#      - ./food-delivery-order_api:/app
-#    ports:
-#      - "5000:5000"
-#    links:
-#      - db
-#    restart: always
-#    environment:
-#      APP_ENV: dev
-#      MONGODB_URI: "mongodb://db:27017"
+  food-delivery-order_api:
+    build: food-delivery-order_api
+    volumes:
+      - ./food-delivery-order_api:/app
+    ports:
+      - "5000:5000"
+    links:
+      - db
+    restart: always
+    environment:
+      APP_ENV: dev
+      MONGODB_URI: "mongodb://db:27017"
   db:
     image: mongo:3.0
     ports:
